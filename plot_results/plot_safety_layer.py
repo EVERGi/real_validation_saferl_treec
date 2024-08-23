@@ -11,6 +11,8 @@ def plot_safety_layer():
     ems_types = ["RL", "RBC", "Tree", "MPC"]
     # Filter out values below 9200 for grid data
     for ems in ems_types:
+        for key_corr in ["grid", "correction"]:
+            results[key_corr][ems] = pd.Series(results[key_corr][ems])
         results["grid"][ems] = results["grid"][ems][results["grid"][ems] > 9200]
 
     # Prepare the data for plotting

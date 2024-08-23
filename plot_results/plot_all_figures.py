@@ -5,13 +5,17 @@ from plot_comparison_results import (
 from plot_example_day import plot_example_day
 from plot_rl_improvement import rl_progress_plot
 from plot_tensorboard_logs import plot_tensorboard_logs
+from plot_safety_layer import plot_safety_layer
 import matplotlib.pyplot as plt
 
 
 def plot_all_figures():
 
+    plot_safety_layer()
+    print("Plotted the safety layer metrics")
     plot_experiment_simulation()
     print("Plotted experiment simulation comparison results")
+
     plot_house_3_tree_improvement()
     print("Plotted house 3 improvement with RBC policy for TreeC algorithm")
     plot_example_day()
