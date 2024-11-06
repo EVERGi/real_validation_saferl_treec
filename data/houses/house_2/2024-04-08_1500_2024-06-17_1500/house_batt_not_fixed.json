@@ -1,0 +1,77 @@
+{
+    "Microgrid": {
+        "number_of_nodes": 2,
+        "timezone": "UTC",
+        "start_time": "2024/04/08 15:00:00",
+        "end_time": "2024/06/17 15:00:00",
+        "time_step": "00:15:00"
+    },
+    "Branches": {
+        "Branch 0": {
+            "nodes_index": "0to1",
+            "max_power_electrical": 10
+        }
+    },
+    "Assets": {
+        "Asset_0": {
+            "node_number": 1,
+            "name": "Battery_0",
+            "soc": 1.0,
+            "soc_min": 0,
+            "soc_max": 1,
+            "charge_eff": 0.95,
+            "disch_eff": 0.95,
+            "max_charge": 0.5,
+            "max_discharge": 0.5,
+            "size": 5
+        },
+        "Asset_1": {
+            "node_number": 0,
+            "name": "Consumer_0",
+            "max_consumption_power": 20,
+            "size": 20
+        },
+        "Asset_2": {
+            "node_number": 0,
+            "name": "PublicGrid_0",
+            "max_consumption_power": 10000,
+            "max_production_power": 10000,
+            "size": 1
+        },
+        "Asset_3": {
+            "node_number": 1,
+            "name": "SolarPv_0",
+            "max_production_power": 4,
+            "size": 4
+        },
+        "Asset_4": {
+            "node_number": 0,
+            "name": "Charger_0",
+            "max_charge_cp": 7.4,
+            "max_discharge_cp": 0,
+            "ID": 0
+        }
+    },
+    "Environments": {
+        "Environment_0": {
+            "nodes_number": "0,1",
+            "sell_to_grid": 0.04,
+            "buy_from_grid": 0.2,
+            "success": "./environment/success.csv",
+            "Consumer_0_electric": "./environment/cons.csv",
+            "ems_used": "./environment/ems_used.csv",
+            "PublicGrid_0": "./environment/grid.csv",
+            "day_ahead_price": "./environment/day_ahead_prices.csv",
+            "soc_svl": "./environment/soc.csv",
+            "PublicGrid_0_import": "./environment/energy_import.csv",
+            "SolarPv_0": "./environment/solar.csv",
+            "PublicGrid_0_export": "./environment/energy_export.csv",
+            "./../../common_env/ev_schedule_2023_2024_switch_1500.csv": null,
+            "kwh_offtake_cost": 0.1140693,
+            "injection_extra": -0.00905,
+            "offtake_extra": 0.011,
+            "capacity_tariff": 3.4938417,
+            "year_cost": 115.84
+        }
+    }
+}

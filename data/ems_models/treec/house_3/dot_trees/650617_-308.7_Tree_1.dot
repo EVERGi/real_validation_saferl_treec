@@ -1,0 +1,129 @@
+digraph BST {
+    node [fontname="Arial" style=filled colorscheme=paired12];
+    0 [ label = "soc_ev:
+0.00" fillcolor=9];
+    1 [ label = "norm_price_now:
+0.00" fillcolor=10];
+    2 [ label = "Consumer_0_power:
+-5.39" fillcolor=6];
+    3 [ label = "time of day (h):
+4.88" fillcolor=1];
+    4 [ label = "Consumer_0_power:
+-12.40" fillcolor=6];
+    5 [ label = "0.36
+Visit count: 0" fillcolor=white];
+    6 [ label = "0.22
+Visit count: 0" fillcolor=white];
+    7 [ label = "norm_price_now:
+0.03" fillcolor=10];
+    8 [ label = "0.26
+Visit count: 0" fillcolor=white];
+    9 [ label = "0.98
+Visit count: 0" fillcolor=white];
+    10 [ label = "norm_price_now:
+0.42" fillcolor=10];
+    11 [ label = "day_of_week:
+5.61" fillcolor=2];
+    12 [ label = "0.98
+Visit count: 0" fillcolor=white];
+    13 [ label = "0.27
+Visit count: 0" fillcolor=white];
+    14 [ label = "Charger_0_power:
+-6.81" fillcolor=7];
+    15 [ label = "0.61
+Visit count: 0" fillcolor=white];
+    16 [ label = "0.93
+Visit count: 0" fillcolor=white];
+    17 [ label = "Battery_0_power:
+2.89" fillcolor=4];
+    18 [ label = "time of day (h):
+14.88" fillcolor=1];
+    19 [ label = "SolarPv_0_power:
+3.94" fillcolor=5];
+    20 [ label = "0.65
+Visit count: 0" fillcolor=white];
+    21 [ label = "1.00
+Visit count: 0" fillcolor=white];
+    22 [ label = "0.41
+Visit count: 0" fillcolor=white];
+    23 [ label = "norm_price_now:
+0.06" fillcolor=10];
+    24 [ label = "0.00
+Visit count: 0" fillcolor=white];
+    25 [ label = "0.40
+Visit count: 0" fillcolor=white];
+    26 [ label = "Consumer_0_power:
+-6.51" fillcolor=6];
+    27 [ label = "time of day (h):
+24.00" fillcolor=1];
+    28 [ label = "soc:
+1.00" fillcolor=3];
+    29 [ label = "0.41
+Visit count: 0" fillcolor=white];
+    30 [ label = "0.53
+Visit count: 0" fillcolor=white];
+    31 [ label = "Consumer_0_power:
+-4.45" fillcolor=6];
+    32 [ label = "0.98
+Visit count: 0" fillcolor=white];
+    33 [ label = "0.98
+Visit count: 0" fillcolor=white];
+    34 [ label = "soc:
+0.50" fillcolor=3];
+    35 [ label = "Charger_0_power:
+-3.68" fillcolor=7];
+    36 [ label = "0.64
+Visit count: 32" fillcolor=white];
+    37 [ label = "0.76
+Visit count: 1360" fillcolor=white];
+    38 [ label = "soc_ev:
+0.88" fillcolor=9];
+    39 [ label = "0.35
+Visit count: 7131" fillcolor=white];
+    40 [ label = "0.62
+Visit count: 213" fillcolor=white];
+
+    0  -> 1[ label = "<"];
+    0  -> 26[ label = ">="];
+    1  -> 2[ label = "<"];
+    1  -> 17[ label = ">="];
+    2  -> 3[ label = "<"];
+    2  -> 10[ label = ">="];
+    3  -> 4[ label = "<"];
+    3  -> 7[ label = ">="];
+    4  -> 5[ label = "<"];
+    4  -> 6[ label = ">="];
+    7  -> 8[ label = "<"];
+    7  -> 9[ label = ">="];
+    10  -> 11[ label = "<"];
+    10  -> 14[ label = ">="];
+    11  -> 12[ label = "<"];
+    11  -> 13[ label = ">="];
+    14  -> 15[ label = "<"];
+    14  -> 16[ label = ">="];
+    17  -> 18[ label = "<"];
+    17  -> 23[ label = ">="];
+    18  -> 19[ label = "<"];
+    18  -> 22[ label = ">="];
+    19  -> 20[ label = "<"];
+    19  -> 21[ label = ">="];
+    23  -> 24[ label = "<"];
+    23  -> 25[ label = ">="];
+    26  -> 27[ label = "<"];
+    26  -> 34[ label = ">="];
+    27  -> 28[ label = "<"];
+    27  -> 31[ label = ">="];
+    28  -> 29[ label = "<"];
+    28  -> 30[ label = ">="];
+    31  -> 32[ label = "<"];
+    31  -> 33[ label = ">="];
+    34  -> 35[ label = "<"];
+    34  -> 38[ label = ">="];
+    35  -> 36[ label = "<"];
+    35  -> 37[ label = ">="];
+    38  -> 39[ label = "<"];
+    38  -> 40[ label = ">="];
+
+    labelloc="t";
+    label="Tree_1";
+}

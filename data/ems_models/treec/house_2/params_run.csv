@@ -1,0 +1,21 @@
+tree
+
+common params:
+input_func,reduced_state_input_norm_price
+action_names,[[], []]
+tot_steps,1720
+eval_func,evaluate_microgrid_trees
+ManagerClass,SVLTreeBattChargRule
+house_num,2
+render,False
+control_mode,battery_and_grid
+switch_hour,15
+config_file,data/houses/house_2/2024-01-01_0000_2024-04-01_0000/house_train.json
+
+algo params:
+gen,1000
+fixed,True
+dimension,122
+pop_size,1000
+single_threaded,False
+pygmo_algo,pso_gen

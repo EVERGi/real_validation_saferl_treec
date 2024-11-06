@@ -1,0 +1,15 @@
+digraph BST {
+    node [fontname="Arial" style=filled colorscheme=paired12];
+    0 [ label = "time of day (h):
+14.92" fillcolor=1];
+    1 [ label = "0.41
+Visit count: 5460" fillcolor=white];
+    2 [ label = "0.00
+Visit count: 3276" fillcolor=white];
+
+    0  -> 1[ label = "<"];
+    0  -> 2[ label = ">="];
+
+    labelloc="t";
+    label="Tree_0";
+}

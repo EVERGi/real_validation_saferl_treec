@@ -1,0 +1,148 @@
+[tool.poetry]
+name = "simugrid"
+version = "1.4.0"
+description = "This project is a microgrid simulator for operation of energy grids with various electric and thermal assets"
+authors = [
+  "Julian Ruddick <julian.jacques.ruddick@vub.be>",
+  "Simon Aerts <simon.aerts@vub.be>",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = ">=1.19, <1.27"
+pandas = ">=1.4.0, <1.6"
+pvlib = ">=0.9.0, <0.11"
+pyomo = ">=0.9.0, <6.7"
+opencv-python = ">=4.8.0.74, <4.9.0.81"
+pyephem = "9.99"
+pyvis = "0.3.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=7.3.1"
+black = ">=23.3.0"
+pytest-cov = ">=4.0"
+coverage = ">=7.2.3"
+isort = ">=5.12"
+ruff = ">=0.0.262"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "=6.2.1"
+sphinx-rtd-theme = "^1.2.2"
+
+[build-system]
+requires = [
+    "setuptools>=60",
+    "setuptools-scm>=8.0",
+    "poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[project]
+dynamic = ["version"]
+[tool.setuptools_scm]
+version_file = "simugrid/_version.py"
+
+
+[tool.ruff]
+# Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
+select = ["E", "F", "D"]
+ignore = []
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = [
+  "A",
+  "B",
+  "D",
+  "E",
+  "F",
+  "G",
+  "I",
+  "N",
+  "Q",
+  "S",
+  "W",
+  "ANN",
+  "ARG",
+  "BLE",
+  "COM",
+  "DJ",
+  "DTZ",
+  "EM",
+  "ERA",
+  "EXE",
+  "FBT",
+  "ICN",
+  "INP",
+  "ISC",
+  "NPY",
+  "PD",
+  "PGH",
+  "PIE",
+  "PL",
+  "PT",
+  "PTH",
+  "PYI",
+  "RET",
+  "RSE",
+  "RUF",
+  "SIM",
+  "SLF",
+  "TCH",
+  "TID",
+  "TRY",
+  "UP",
+  "YTT",
+]
+unfixable = []
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+  ".bzr",
+  ".direnv",
+  ".eggs",
+  ".git",
+  ".hg",
+  ".mypy_cache",
+  ".nox",
+  ".pants.d",
+  ".pytype",
+  ".ruff_cache",
+  ".svn",
+  ".tox",
+  ".venv",
+  "__pypackages__",
+  "buck-out",
+  "_build",
+  "build",
+  "dist",
+  "node_modules",
+  "venv",
+]
+
+# Same as Black.
+line-length = 88
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# Assume Python 3.9.
+target-version = "py310"
+
+[tool.ruff.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 10
+
+[tool.pyright]
+include = ["evergrid"]
+exclude = [
+  "**/node_modules",
+  "**/__pycache__",
+  "src/experimental",
+  "src/typestubs",
+  "venv/",
+]
+
+venv = "venv"
