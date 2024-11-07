@@ -272,9 +272,6 @@ def plot_cost_comparison(all_costs, remove_capacity=False):
                         pos[0] - 2, pos[1] - 0.42, text[i], fontsize=12, color="#ff7f0e"
                     )
 
-                plt.savefig(
-                    "/home/django/Documents/Thesis_MOBI/InterConnect/652d084deb12ec3cd4be564b/mpc_simul_diff.pdf"
-                )
             plt.title(f"{algo} {comp} - Real")
 
 
@@ -376,10 +373,6 @@ def plot_side_stack_bar(all_costs):
     # plot the legend
     plt.legend(handles=handles, ncol=2)
     plt.tight_layout()
-    if save_fig:
-        plt.savefig(
-            "/home/django/Documents/Thesis_MOBI/InterConnect/652d084deb12ec3cd4be564b/comparions_costs.pdf"
-        )
 
 
 def calc_diff_single_import_export(log_folder):
@@ -562,10 +555,6 @@ def plot_house_3_tree_progress():
         plt.legend(handles=handles, ncol=2, loc="upper left")
 
         plt.tight_layout()
-        if save_fig:
-            plt.savefig(
-                "/home/django/Documents/Thesis_MOBI/InterConnect/652d084deb12ec3cd4be564b/house3_tree_rbc.pdf"
-            )
 
 
 def print_real_energy_peak():
